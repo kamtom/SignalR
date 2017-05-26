@@ -2,7 +2,7 @@
     it('can be used to connect to SignalR', done => {
         const message = "message";
 
-        let webSocket = new WebSocket(ECHOENDPOINT_URL.replace(/^http/, "ws") + '/ws');
+        let webSocket = new WebSocket(ECHOENDPOINT_URL.replace(/^http/, "ws"));
 
         webSocket.onopen = () => {
             webSocket.send(message);
